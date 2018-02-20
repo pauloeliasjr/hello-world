@@ -6,6 +6,7 @@ pipeline {
         stage('Pre-build') {
           steps {
             sh 'docker info'
+            fileExists 'Dockerfile'
           }
         }
         stage('Test') {
