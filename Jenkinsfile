@@ -17,5 +17,10 @@ pipeline {
         }
       }
     }
+    stage('Approval') {
+      steps {
+        input 'Voce aprova?'
+      }
+    }
   }
 }
