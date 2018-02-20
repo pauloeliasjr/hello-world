@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       parallel {
-        stage('Build') {
+        stage('Pre-build') {
           steps {
-            sh 'pwd'
+            sh 'docker info'
           }
         }
         stage('Test') {
